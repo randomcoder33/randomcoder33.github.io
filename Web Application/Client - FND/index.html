@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href='./style.css'>
+</head>
+<body>
+<div class="jumbotron d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div style="text-align: center;"><h3>Fake News Detector</h3></div>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- input  -->
+                        <div class="form-group">
+                            <label for="text">News Article Text Input</label>
+                            <textarea class="form-control input-lg" id="text" rows="10"
+                                      placeholder="paste your article here..."></textarea>
+                        </div>
+
+                        <!-- options and submit -->
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <select class="custom-select my-1 mr-sm-2" id="Algorithm">
+                                    <option value="GBC" selected>Gradient Boosting</option>
+                                    <option value="Regressor">Random Forest</option>
+                                    <!-- <option value="LDA">Linear Discriminant Dnalysis</option> -->
+                                </select>
+                            </div>
+                            <div class="col-sm-5">
+                                <select class="custom-select my-1 mr-sm-2" id="Granularity">
+                                    <option value="Fine" selected>Fine Grained(Empath)</option>
+                                    <option value="Coarse">Coarse Grained(TS20)</option>
+                                    <option value="Hybrid">Hybrid Granularity(Fine & Coarse)</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="btn-container">
+                                    <button id="predict" type="button" class="btn btn-outline-info btn-block">Check !
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- results -->
+                        <div class="result">
+                            <!-- results here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
